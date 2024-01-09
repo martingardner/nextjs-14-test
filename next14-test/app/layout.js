@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import Link from 'next/link';
+import global from './global.module.scss';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -10,14 +11,22 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  const ids = [1,2,4,10];
+
+  const idList = ids.map( (i, index) => {
+    return <Link key={`${index}-${i}`} href={`/${i}`}>{i}</Link>
+  });
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <h1>Welcome to the Test</h1>
-        <nav>
+        <nav className={global.layoutNavigation}>
           <Link href="/">Home</Link>
           <Link href="/list">List</Link>
           <Link href="/lizard">Lizard</Link>
+          { idList }
         </nav>
         <main>
           {children}

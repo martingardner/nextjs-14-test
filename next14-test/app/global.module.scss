@@ -3,3 +3,14 @@ $primary-color: #0000FF;
 :export {
     primaryColor: $primary-color;
 }
+
+
+.layoutNavigation {
+    a {
+        margin-right: 5px;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #ff0000;
+    }
+}
