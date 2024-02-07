@@ -13,10 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-900 text-white min-h-screen h-screen`}>
+      <body className={`${inter.className} bg-slate-900 text-white w-full`}>
         <Header />
         
-        <aside className="border-r-2 border-sky-500 px-4 py-2 inline-block h-main-layout w-full lg:w-nav">
+        <aside className="border-r-2 border-sky-500 px-4 py-2 inline-block h-main-layout w-full lg:w-1/4 relative">
           <NavigationPanel />
         </aside>
 

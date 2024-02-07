@@ -12,7 +12,7 @@ import Image from 'next/image';
 export default function NavItem({data, index}){
 
     return (
-        <div key={`${index}-nav-item`} className="rounded-full p-6 bg-radial-gradient border-single border-2 border-sky-100 overflow-hidden w-252 mt-5">
+        <div key={`${index}-nav-item`} className="rounded-full p-6 bg-radial-gradient border-single border-2 border-sky-100 overflow-hidden aspect-square  mt-10">
             <div className="rounded-full overflow-hidden w-200 h-200 border-single border-2 border-sky-300 relative group">
             
                 <Image 
