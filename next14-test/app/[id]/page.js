@@ -13,8 +13,19 @@ export default function Page( { params }) {
         setIDFetchData(idFetchData);
     }
 
+    async function postIDData(){
+        const postEmptyData = await fetch(`/${params.id}/id`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        console.log('postEmptyData', postEmptyData);
+    }
+
     useEffect( ()=> {
-        getIDData();        
+        getIDData();  
+        postIDData();      
     }, [])
 
     return (
