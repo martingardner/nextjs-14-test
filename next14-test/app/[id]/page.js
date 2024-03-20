@@ -9,8 +9,8 @@ export default function Page( { params }) {
         const idFetchData = await fetch(`/${params.id}/id`)
             .then( (response) => response.text() )
         
-            console.log('idFetchData', idFetchData);
-            setIDFetchData(idFetchData);
+        console.log('idFetchData', idFetchData);
+        setIDFetchData(idFetchData);
     }
 
     useEffect( ()=> {
